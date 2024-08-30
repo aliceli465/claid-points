@@ -8,14 +8,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "https://claid-frontend.vercel.app",
-      "https://claid.org",
-      "https://www.claid.org",
-    ], // Allow requests from these specific origins
+    origin: "https://www.claid.org/", // Allow requests from this specific origin
   })
 );
-
 app.use(express.json());
 app.use("/checkin", checkin);
 app.use("/getPoints", getPoints);
